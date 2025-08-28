@@ -39,4 +39,16 @@
   echo "is \$a integer? " . (is_int($a) ? 'Yes' : 'No') . "<br>";
   echo "is \$b integer? " . (is_int($b) ? 'Yes' : 'No') . "<br>";
   echo "Type of \$float_num: " . gettype($float_num) . "<br>";
+
+  // number functions
+  $num = -7.5;
+  echo "Absolute value of -7.5: " . abs($num) . "<br>";
+  echo "Ceiling of -7.5: " . ceil($num) . "<br>";
+  echo "Floor of -7.5: " . floor($num) . "<br>";
+  echo "Round of -7.5: " . round($num) . "<br>";  
+  echo "sqrt of 16: " . sqrt(16) . "<br>";
+  echo "max of (1, 5, 3, 9, 2): " . max(1, 5, 3, 9, 2) . "<br>";
+  echo "min of (1, 5, 3, 9, 2): " . min(1, 5, 3, 9, 2) . "<br>";
+  echo "Random number between 1 and 100: " . rand(1, 100) . "<br>";
+  echo "Random number between 1 and 100: " . mt_rand(1, 100) . "<br>";
   
