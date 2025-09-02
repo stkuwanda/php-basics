@@ -1,5 +1,6 @@
 <?php
 // Indexed array
+// access elements via numeric index
 $colors = array("Red", "Green", "Blue");
 
 // Adding elements to the array
@@ -8,6 +9,7 @@ $colors = array("Red", "Green", "Blue");
 // order does not matter.
 $colors[4] = "Yellow";
 $colors[3] = "Black";
+$colors[] = "Indigo";      // Appends at end
 
 echo $colors[0] . ' ';
 echo $colors[1] . ' ';
@@ -39,5 +41,21 @@ echo "<pre>";
 var_dump($fruits);
 echo "</pre>";
 
+// Mixed type array
+$mixed = ["Hello", 10, 10.5, true];
+echo "<pre>";
+var_dump($mixed);
+echo "</pre>";
 
+// Associative array
+// access elements via named keys
+$person = array("name" => "John", "age" => 30, "city" => "New York");
+echo "<pre>";
+var_dump($person);
+echo "</pre>";
+
+$user = ["username" => "johndoe", "email" => "user@email.com", "age" => 25, "is_admin" => false, 'hobbies' => ["reading", "gaming", "coding"]];
+echo "<pre>";
+var_dump($user);
+echo "</pre>";
 
