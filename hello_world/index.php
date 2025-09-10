@@ -8,11 +8,15 @@
 </head>
 
 <body>
-  <?php
+  <!-- <?php
   echo "Hello, World! <br>";
   echo ' This is a simple PHP web page. <br>';
   echo 'Concatenation: ' . 'Hello' . ', ' . 'World' . '!' . '<br>';
-  ?>
+  ?> -->
+  <!--Output PHP in HTML-->
+  <h1>Hello, <?= " World!" ?></h1>
+  <h2>Hi, <?php echo " Simba!" ?></h2>
+  <p>Today's date is <?= date('m-d-Y') ?></p>
 </body>
 
 </html>
