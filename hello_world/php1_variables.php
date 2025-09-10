@@ -56,7 +56,7 @@ echo "<br>";
 
 /* Types of variables in PHP */
 // string
-// snteger
+// integer
 // float (or double)
 // boolean
 // array
