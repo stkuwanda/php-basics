@@ -10,3 +10,10 @@
 for ($i = 1; $i <= 5; $i++) {
   echo "Iteration: $i<br>";
 }
+
+// while loop example
+$j = 1;
+while ($j <= 5) {
+  echo "Count: $j<br>";
+  $j++;
+}
