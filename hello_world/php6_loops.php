@@ -17,3 +17,10 @@ while ($j <= 5) {
   echo "Count: $j<br>";
   $j++;
 }
+
+// do-while loop example
+$k = 1;
+do {
+  echo "Number: $k<br>";
+  $k++;
+} while ($k <= 5);
