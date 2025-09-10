@@ -1,3 +1,6 @@
+<?php
+$is_student = true;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +20,11 @@
   <h1>Hello, <?= " World!" ?></h1>
   <h2>Hi, <?php echo " Simba!" ?></h2>
   <p>Today's date is <?= date('m-d-Y') ?></p>
+  <?php if ($is_student) {
+    echo "<p>You are a student.</p>";
+  } else {
+    echo "<p>You are not a student.</p>";
+  } ?>
 </body>
 
 </html>
