@@ -24,3 +24,9 @@ do {
   echo "Number: $k<br>";
   $k++;
 } while ($k <= 5);
+
+// foreach loop example
+$colors = array("Red", "Green", "Blue", "Yellow", "Purple");
+foreach ($colors as $color) {
+  echo "Color: $color<br>";
+}
