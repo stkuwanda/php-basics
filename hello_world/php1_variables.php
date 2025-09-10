@@ -99,3 +99,8 @@ function testScope()
 
 testScope();
 // echo $local_var; // This will cause an error as $local_var is not accessible here
+
+// PHP constants
+define("SITE_NAME", "My PHP Website");
+echo "Welcome to " . SITE_NAME . "!" . "<br>";
+// echo SITE_NAME = "New Name"; // This will cause an error as constants cannot be changed
