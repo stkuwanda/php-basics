@@ -23,5 +23,15 @@ function greet($name = "Guest")
 {
   echo "<br>Hello, $name!";
 }
+
 greet(); // call the function without argument
 greet("Alice"); // call the function with argument
+
+// function with return value
+function multiply($x, $y)
+{
+  return $x * $y;
+}
+
+$result = multiply(4, 5); // call the function and store the return value
+echo "<br>The product of 4 and 5 is: $result.";
