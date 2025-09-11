@@ -17,3 +17,11 @@ function addNumbers($a, $b)
 }
 
 addNumbers(5, 10); // call the function with arguments
+
+// functiion with default parameter values
+function greet($name = "Guest")
+{
+  echo "<br>Hello, $name!";
+}
+greet(); // call the function without argument
+greet("Alice"); // call the function with argument
