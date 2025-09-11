@@ -34,3 +34,8 @@ $colors = array("Red", "Green", "Blue", "Yellow", "Purple");
 foreach ($colors as $color) {
   echo "Color: $color<br>";
 }
+
+$scores = array("Alice" => 90, "Bob" => 85, "Charlie" => 92);
+foreach ($scores as $name => $score) {
+  echo "$name scored $score<br>";
+}
