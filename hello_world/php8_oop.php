@@ -53,4 +53,10 @@ $car = new Car("Honda", "Civic", 2021);
 echo "Car Info: " . $car->getCarInfo() . "<br>";
 echo "<pre>";
 var_dump($car);
+echo "</pre><br>";
+
+// Convert an associative array to an object
+$obj1 = (object) ['a' => 1, 'b' => 2];
+echo "<pre>"; 
+var_dump($obj1);
 echo "</pre>";
