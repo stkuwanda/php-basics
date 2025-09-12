@@ -60,3 +60,19 @@ $obj1 = (object) ['a' => 1, 'b' => 2];
 echo "<pre>"; 
 var_dump($obj1);
 echo "</pre>";
+
+class User {
+  public $name;
+  
+  public function __construct($name) {
+    $this->name = $name;
+    echo "User $name created.<br>";
+  }
+
+  // Destructor
+  public function __destruct() {
+    echo "User $this->name is being destroyed.<br>";
+  }
+}
+
+$user = new User("Alice");
