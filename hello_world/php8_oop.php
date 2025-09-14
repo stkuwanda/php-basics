@@ -76,3 +76,53 @@ class User {
 }
 
 $user = new User("Alice");
+
+// Inheritance and Polymorphism
+
+class BaseClassVehicle {
+  public $make;
+  public $model;
+
+  public function __construct($make, $model) {
+    $this->make = $make;
+    $this->model = $model;
+  }
+
+  public function getInfo() {
+    return 'Vehicle info: ' . $this->make . ' ' . $this->model;
+  }
+}
+
+class SubClassTruck extends BaseClassVehicle {
+  public $payloadCapacity;
+
+  public function __construct($make, $model, $payloadCapacity) {
+    parent::__construct($make, $model);
+    $this->payloadCapacity = $payloadCapacity;
+  }
+
+  // Overriding the getInfo method
+  public function getInfo() {
+    return parent::getInfo() . ' with payload capacity of ' . $this->payloadCapacity . ' tons.';
+  }
+}
+
+class SubClassCar extends BaseClassVehicle {
+  public $seatingCapacity;
+
+  public function __construct($make, $model, $seatingCapacity) {
+    parent::__construct($make, $model);
+    $this->seatingCapacity = $seatingCapacity;
+  }
+
+  // Overriding the getInfo method
+  public function getInfo() {
+    return parent::getInfo() . ' with seating capacity of ' . $this->seatingCapacity . ' persons.';
+  }
+}
+
+$truck = new SubClassTruck('Ford', 'F-150', 3);
+$car = new SubClassCar('Toyota', 'Camry', 5);
+
+echo $truck->getInfo() . "<br>";
+echo $car->getInfo() . "<br>";
