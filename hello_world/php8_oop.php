@@ -80,6 +80,14 @@ $user = new User("Alice");
 // Inheritance and Polymorphism
 
 class BaseClassVehicle {
+  public static $type = 'aircraft';
+
+  // Factory method
+  public static function fromMakeModel($make, $model) {
+    echo "Creating a new vehicle of type " . self::$type . "<br>";
+    return new self($make, $model);
+  }
+
   public $make;
   public $model;
 
@@ -122,7 +130,14 @@ class SubClassCar extends BaseClassVehicle {
 }
 
 $truck = new SubClassTruck('Ford', 'F-150', 3);
-$car = new SubClassCar('Toyota', 'Camry', 5);
+$car = new SubClassCar('Toyota', 'Camry', 5); 
+$aircraft = BaseClassVehicle::fromMakeModel('Boeing', '747'); // Using factory method
+$aircraft1 = $aircraft::fromMakeModel('Airbus', 'A320'); // Using late static binding
+$car1 = $car::fromMakeModel('Benz', 'GLE'); // Using late static binding
 
 echo $truck->getInfo() . "<br>";
 echo $car->getInfo() . "<br>";
+echo $aircraft->getInfo() ."<br>";
+echo $aircraft1->getInfo() . "<br>";
+echo $car1->getInfo() . "<br>";
+
